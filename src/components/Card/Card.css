@@ -1,0 +1,22 @@
+.card {
+    width: 300px;
+    height: 131px;
+    background: #FFFFD5;
+    box-shadow: 0px 4px 5px rgba(0, 0, 0, 0.15);
+    border-radius: 5px;
+    font-family: Recursive;
+    font-weight: 400;
+    font-size: 18px;
+    position: relative;
+    box-sizing: border-box;
+    padding: 15px;
+    margin: 12px;
+}
+
+.card img {
+    width: 30px;
+    height: 20px;
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+}
