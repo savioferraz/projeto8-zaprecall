@@ -27,7 +27,11 @@ export default function MainPage() {
           />
         ))}
       </div>
-      <BottomBar Result={Result} deckShuffle={deckShuffle} />
+      <BottomBar
+        cont={Result.length}
+        Result={Result}
+        deckShuffle={deckShuffle}
+      />
     </div>
   );
 }

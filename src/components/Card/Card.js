@@ -86,7 +86,3 @@ export default function Card({ num, question, answer, setResult }) {
     );
   }
 }
-
-// else {
-//     <CardResult num={num} cardState={cardState} />
-// }
