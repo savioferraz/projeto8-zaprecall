@@ -6,9 +6,9 @@ import Card from "../Card/Card";
 import deck from "../Deck";
 
 export default function MainPage(){
-
-    const deckShuffle = deck.sort(() => Math.random() - 0.5)
-    console.log(deckShuffle);
+    
+    const deckShuffle = deck.sort(() => Math.random() - 0.5);
+    const [Result, setResult] = React.useState([]);
 
     return (
         <div className="mainPage">
@@ -17,9 +17,21 @@ export default function MainPage(){
                 ZapRecall
             </div>
             <div className="content">
-                {deckShuffle.map((key, index) => <Card key={index} num={index+1} question={deckShuffle.question} answer={deckShuffle.answer}/>)}
+                {deckShuffle.map((deckShuffle, index) => 
+                <Card 
+                    key={index} 
+                    num={index+1} 
+                    question={deckShuffle.question} 
+                    answer={deckShuffle.answer}
+                    Result={Result}
+                    setResult={setResult}
+                />)}
             </div>
-            <BottomBar />
+            <BottomBar 
+                Result={Result}
+                cont={Result.length}
+                num={deckShuffle.length}
+            />
         </div>
     )
 }

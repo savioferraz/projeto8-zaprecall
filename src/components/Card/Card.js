@@ -1,11 +1,11 @@
 import React from "react";
 import "./Card.css";
 import setinha from "../../assets/images/setinha.png";
-// import deck from "../Deck";
 
 export default function Card({num, question, answer }){
     
     const [cardState, setcardState] = React.useState("button");
+
     
     if (cardState === "button") {
         return (        
@@ -66,3 +66,7 @@ export default function Card({num, question, answer }){
         )
     }
 }
+
+// else {
+//     <CardResult num={num} cardState={cardState} />
+// }
