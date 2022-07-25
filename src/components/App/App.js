@@ -1,17 +1,27 @@
 import React from "react";
 import "../../assets/css/reset.css";
-import MainPage from "../MainPage/MainPage";
 import "./App.css";
-// import StartMenu from "../StartMenu/StartMenu.js";
+import MainPage from "../MainPage/MainPage";
+import Logo from "../../assets/images/logo.png"
 
+export default function App() {
+    
+    const [start, setStart] = React.useState(false);
 
-function App() {
-    return (
-        <>
-        {/* <StartMenu /> */}
-        <MainPage />
-        </>
-    )
+    if (!start) {
+        return (
+            <div className="start">
+                <img src={Logo} alt="logo" />
+                <h1>ZapRecall</h1>
+                <div className="button" onClick={() => setStart(true)}>Iniciar Recall!</div>
+            </div>
+        )
+    }
+    else {  
+        return (
+            <>
+            <MainPage />
+            </>
+        )
+    }
 }
-
-export default App;

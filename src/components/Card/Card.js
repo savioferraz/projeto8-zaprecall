@@ -1,18 +1,68 @@
 import React from "react";
 import "./Card.css";
-import BackArrow from "../../assets/images/setinha.png";
-import Answers from "../Answers/Answers";
+import setinha from "../../assets/images/setinha.png";
+// import deck from "../Deck";
 
-function Card(){
-    return (
-        <div className="card">
-            {/* O que é JSX?
-            <img src={BackArrow} /> */}
-            JSX é uma sintaxe para escrever HTML dentro do JS
-            <Answers />
-
-        </div>
-    )
+export default function Card({num, question, answer }){
+    
+    const [cardState, setcardState] = React.useState("button");
+    
+    if (cardState === "button") {
+        return (        
+            <div className="buttons" onClick={() => setcardState("question")}>
+                Pergunta {num}
+                <ion-icon name="play-outline"></ion-icon>
+            </div>
+        )
+    } 
+    if (cardState === "question") {
+        return (
+            <div className="card">
+                {question}
+            <img src={setinha} alt="setinha" onClick={() => setcardState("answer")}/>
+            </div>
+        )
+    }
+    if (cardState === "answer") {
+        return (
+            <div className="card">
+                {answer}
+                <div className="answers">
+                    <div className="answer no" onClick={() => setcardState("wrong")}>
+                        Não lembrei
+                    </div>
+                    <div className="answer maybe" onClick={() => setcardState("almost")}>
+                        Quase não lembrei
+                    </div>
+                    <div className="answer yes" onClick={() => setcardState("correct")}>
+                        Zap!
+                    </div>  
+                </div>
+            </div>
+        )
+    }
+    if (cardState === "wrong") {
+        return (        
+            <div className="buttons wrong">
+                Pergunta {num}
+                <ion-icon name="close-circle"></ion-icon>
+            </div>
+        )
+    }
+    if (cardState === "almost") {
+        return (        
+            <div className="buttons almost">
+                Pergunta {num}
+                <ion-icon name="help-circle"></ion-icon>
+            </div>
+        )
+    }
+    if (cardState === "correct") {
+        return (        
+            <div className="buttons correct">
+                Pergunta {num}
+                <ion-icon name="checkmark-circle"></ion-icon>
+            </div>
+        )
+    }
 }
-
-export default Card;

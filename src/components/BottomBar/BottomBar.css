@@ -1,0 +1,14 @@
+.bottomBar {
+    position: fixed;
+    bottom: 0;
+    height: 70px;
+    width: 100%;
+    background-color: #ffffff;
+    font-family: 'Recursive';
+    font-weight: 400;
+    font-size: 18px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
