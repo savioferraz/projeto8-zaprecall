@@ -1,32 +1,42 @@
 import React from "react";
 import "./BottomBar.css";
+import Card from "../Card/Card";
 
-export default function BottomBar(num, cont, Result) {
-    
-    const [answer, setAnswer] = React.useState("")
+export default function BottomBar({ Result, deckShuffle }) {
+  const [num, setNum] = React.useState(deckShuffle.length);
+  const [cont, setCont] = React.useState(Result.length);
 
-    return (
-        <div className="bottomBar">
-            {/* {Result.map((answer) => {
-                if (answer === wrong) {
-                    return (
-                        <div className="wrong"><ion-icon name="close-circle"></ion-icon></div>
-                    )
-                }
-                if (answer === maybe) {
-                    return (
-                        <div className="buttons almost"><ion-icon name="help-circle"></ion-icon></div>
-                    )
-                }
-                if (answer === correct) {
-                    return (
-                        <div className="buttons correct"><ion-icon name="checkmark-circle"></ion-icon></div>
-                    )
-                }
-            }
-            )}       
-            {cont}/{num} CONCLUÌDOS */}
-            CONCLUÌDOS
-        </div>
-    )
+  // const [answer, setAnswer] = React.useState("")
+  console.log(Result);
+  return (
+    <div className="bottomBar">
+      {cont}/{num} CONCLUÌDOS
+      <div className="results">
+        {Result.map((cardState) => {
+          if (cardState === "wrong") {
+            setCont++;
+            return (
+              <div className="wrong">
+                <ion-icon name="close-circle"></ion-icon>
+              </div>
+            );
+          }
+          if (cardState === "almost") {
+            return (
+              <div className="almost">
+                <ion-icon name="help-circle"></ion-icon>
+              </div>
+            );
+          }
+          if (cardState === "correct") {
+            return (
+              <div className="correct">
+                <ion-icon name="checkmark-circle"></ion-icon>
+              </div>
+            );
+          }
+        })}
+      </div>
+    </div>
+  );
 }

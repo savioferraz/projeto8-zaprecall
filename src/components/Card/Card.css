@@ -1,100 +1,99 @@
 .card {
-    width: 300px;
-    height: 131px;
-    background: #FFFFD5;
-    box-shadow: 0px 4px 5px rgba(0, 0, 0, 0.15);
-    border-radius: 5px;
-    font-family: Recursive;
-    font-weight: 400;
-    font-size: 18px;
-    position: relative;
-    box-sizing: border-box;
-    padding: 15px;
-    margin: 12px;
+  width: 300px;
+  height: 131px;
+  background: #ffffd5;
+  box-shadow: 0px 4px 5px rgba(0, 0, 0, 0.15);
+  border-radius: 5px;
+  font-family: Recursive;
+  font-weight: 400;
+  font-size: 18px;
+  position: relative;
+  box-sizing: border-box;
+  padding: 15px;
+  margin: 12px;
 }
 
 .card img {
-    width: 30px;
-    height: 20px;
-    position: absolute;
-    bottom: 10px;
-    right: 10px;
+  width: 30px;
+  height: 20px;
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
 }
 
 .buttons {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    background: #FFFFFF;
-    box-shadow: 2px 4px 4px rgba(0, 0, 0, 0.15);
-    border-radius: 5px;
-    font-family: Recursive;
-    font-weight: 700;
-    font-size: 16px;
-    width: 300px;
-    height: 65px;
-    box-sizing: border-box;
-    padding: 18px;
-    margin: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #ffffff;
+  box-shadow: 2px 4px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 5px;
+  font-family: Recursive;
+  font-weight: 700;
+  font-size: 16px;
+  width: 300px;
+  height: 65px;
+  box-sizing: border-box;
+  padding: 18px;
+  margin: 12px;
 }
 
 .buttons:active {
-    transform: translateY(2px);
-    box-shadow: 1px 2px 2px rgba(0, 0, 0, 0.15);
+  transform: translateY(2px);
+  box-shadow: 1px 2px 2px rgba(0, 0, 0, 0.15);
 }
 
 .buttons ion-icon {
-    width: 20px;
-    height: 23px;
+  width: 20px;
+  height: 23px;
 }
 
 .answers {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    position: absolute;
-    bottom: 6px;
-    box-sizing: border-box;
-
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: absolute;
+  bottom: 6px;
+  box-sizing: border-box;
 }
 
 .answer {
-    color: #ffffff;
-    width: 85px;
-    height: 37px;
-    border-radius: 5px;
-    font-size: 14px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-wrap: nowrap;
-    margin: auto 3px;
-    text-align: center;
+  color: #ffffff;
+  width: 85px;
+  height: 37px;
+  border-radius: 5px;
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: nowrap;
+  margin: auto 3px;
+  text-align: center;
 }
 
 .no {
-    background: #FF3030;
+  background: #ff3030;
 }
 
 .maybe {
-    background: #FF922E;
+  background: #ff922e;
 }
 
 .yes {
-    background: #2FBE34;
+  background: #2fbe34;
 }
 
 .wrong {
-    color: #FF3030;
-    text-decoration: line-through;
+  color: #ff3030;
+  text-decoration: line-through;
 }
 
 .almost {
-    color: #FF922E;
-    text-decoration: line-through;
+  color: #ff922e;
+  text-decoration: line-through;
 }
 
 .correct {
-    color: #2FBE34;
-    text-decoration: line-through;
+  color: #2fbe34;
+  text-decoration: line-through;
 }
